@@ -1,0 +1,117 @@
+:root {
+  --bg: #faf4ef;
+  --choco: #000;
+  --muted: #333;
+}
+
+/* Reset & Base */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--choco);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar */
+.main-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  z-index: 10;
+  border-bottom: 1px solid #e0dcd7;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: var(--choco);
+}
+
+/* Section Layout */
+.sec {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 4rem;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 3rem; /* instead of margin-top */
+}
+
+.text-col {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.image-col {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo1 {
+  width: 650px;
+  height: auto;
+  padding-top: 0; /* remove extra top space */
+}
+
+.pic1 {
+  width: 400px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.subtext {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  letter-spacing: 0.1em;
+}
+
+/* Other Sections */
+#about, #books, #authors, #contact {
+  flex-direction: column;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
