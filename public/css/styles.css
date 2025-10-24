@@ -53,11 +53,30 @@ html, body {
 
 /* Section Layout */
 .sec {
-  min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 6rem 4rem;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background-color: var(--bg);
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  
+}
+
+.cont{
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+}
+
+.sectitle{
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.secdesc{
+    font-size: 25px;
 }
 
 .hero {
@@ -66,7 +85,7 @@ html, body {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding-top: 3rem; /* instead of margin-top */
+  padding-top: 6rem; /* instead of margin-top */
 }
 
 .text-col {
@@ -87,6 +106,7 @@ html, body {
   width: 650px;
   height: auto;
   padding-top: 0; /* remove extra top space */
+  padding-left: 3rem;
 }
 
 .pic1 {
@@ -98,9 +118,10 @@ html, body {
 
 .subtext {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin-top: 1rem;
   letter-spacing: 0.1em;
+  padding-left: 4rem;
 }
 
 /* Other Sections */
@@ -114,4 +135,92 @@ h2 {
   font-weight: 500;
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* GOAL SECTION FIX */
+.goal {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  justify-content: left;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  background-color: var(--bg);
+}
+
+.goal-image {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.goal-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.goal-text {
+  padding-right: 6rem;
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  max-width: 550px;
+}
+
+.goal-text .sectitle {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.goal-text .secdesc {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .goal {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .goal-text {
+    max-width: 90%;
+  }
+
+  .goal-image img {
+    max-width: 90%;
+  }
+}
+
+.divtitle{
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+}
+.divdesc{
+  padding-right: 6rem;
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  max-width: 500px;
+
+}
+
+footer{
+    background:#000000;
+    color:#fff;
+    text-align:center;
+    padding:1rem
 }
