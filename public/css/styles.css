@@ -65,27 +65,27 @@ html, body {
   
 }
 
-.cont{
-    padding-top: 8rem;
-    padding-bottom: 2rem;
-}
-
 .sectitle{
+    font-family: "Playfair Display", serif;
     font-size: 50px;
     font-weight: 700;
+    color: var(--muted);
 }
 
 .secdesc{
     font-size: 25px;
+    color: var(--muted);
+    padding-right: 5rem;
 }
 
-.hero {
+.sechero {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   padding-top: 6rem; /* instead of margin-top */
+  padding-bottom: 5rem;
 }
 
 .text-col {
@@ -106,14 +106,14 @@ html, body {
   width: 650px;
   height: auto;
   padding-top: 0; /* remove extra top space */
-  padding-left: 3rem;
+  padding-left: 15rem;
 }
 
 .pic1 {
   width: 400px;
   height: auto;
   border-radius: 4px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  
 }
 
 .subtext {
@@ -121,7 +121,7 @@ html, body {
   font-size: 1.7rem;
   margin-top: 1rem;
   letter-spacing: 0.1em;
-  padding-left: 4rem;
+  padding-left: 20rem;
 }
 
 /* Other Sections */
@@ -149,7 +149,8 @@ h2 {
 }
 
 .goal-image {
-  flex: 1 1 500px;
+  padding-left: 10rem;
+  padding-right: 10rem;
   display: flex;
   justify-content: center;
 }
@@ -160,7 +161,7 @@ h2 {
   height: auto;
   border-radius: 6px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
 }
 
 .goal-text {
@@ -186,24 +187,9 @@ h2 {
   color: var(--muted);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .goal {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .goal-text {
-    max-width: 90%;
-  }
-
-  .goal-image img {
-    max-width: 90%;
-  }
-}
-
 .divtitle{
-  flex: 1 1 500px;
+  padding-left: 9rem;
+  padding-right: 20rem;
   display: flex;
   justify-content: center;
 }
@@ -218,9 +204,179 @@ h2 {
 
 }
 
+.cont{
+    
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+}
+.cont .sectitle{
+    padding-left: 1rem;
+    
+}
+.cont .secdesc{
+    padding-left: 6rem;
+    
+}
+
 footer{
     background:#000000;
     color:#fff;
     text-align:center;
     padding:1rem
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  
+  .main-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    z-index: 10;
+    border-bottom: 1px solid #e0dcd7;
+  }
+
+  .main-nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 1.80rem;
+    transition: color 0.3s;
+  }
+  
+  .text-col .logo1{
+    padding-left: 12rem;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .text-col .subtext{
+    margin-top: 1rem;
+    text-align: center;
+    padding-right: 4rem;
+  }
+
+  .image-col {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 1000px;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .pic1 {
+    width: 100%;
+    height: auto;
+    margin-left: 25rem; /* visually shifts image without reducing box size */
+    border-radius: 12px;
+  }
+
+  
+  .sec {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    background-color: var(--bg);
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    
+  }
+
+  .divtitle .sectitle{
+    padding-left: 32rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+  }
+  .divdesc .secdesc{
+    width: 100%;
+    font-size: 32px;
+    padding-bottom: 10rem;
+    padding-left: 14rem;
+  }
+
+  .goal {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .goal-image {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-left: 9rem;
+  }
+
+  .goal-image img {
+    width: 100%;
+    max-width: none;  /* remove the 400px cap */
+    height: auto;
+    padding: 0;       /* remove the push-in */
+    border-radius: 12px; /* optional, to keep it looking polished */
+  }
+
+
+  .goal-text {
+    padding-left: 5rem;  /* small side padding for breathing room */
+    max-width: 600px;
+    
+  }
+
+  .goal-text .sectitle {
+    font-size: 50px;
+    padding-left: 8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .goal-text .secdesc {
+    
+    width: 100%;
+    font-size: 32px;
+    padding-bottom: 5rem;
+    padding-left: 5rem;
+  }
+  .cont{
+    
+    padding-top: 2rem;
+    padding-bottom: 12rem;
+  }
+  .cont .sectitle{
+      padding-left: 20rem;
+
+  }
+  .cont .secdesc{
+      padding-left: 9rem;
+      width: 100%;
+
+  }
+
+  footer{
+    background:#000000;
+    color:#fff;
+    text-align:center;
+    padding-left: 14rem;
+    padding-right: 14rem;
+    width: 100%;
+    
+  }
+  
 }
